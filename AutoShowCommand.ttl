@@ -1,0 +1,43 @@
+; ============================
+; 		日課取得マクロ（汎用版）
+; ============================
+
+;コマンド「ter len 0」を実行
+sendln "ter len 0"
+pause 1
+;プロンプト「#」が返ってくるまで待つ
+waitregex "#|>"
+
+;次のコマンド「show clock」を実行
+sendln "show clock" 
+waitregex "#|>"
+
+sendln "show running-config"
+waitregex "#|>"
+
+sendln "show archive config diff"
+waitregex "#|>"
+
+sendln "show interface status"
+waitregex "#|>"
+
+sendln "show etherchannel summary"
+waitregex "#|>"
+
+sendln "show spanning-tree blockedports"
+waitregex "#|>"
+
+sendln "show spanning-tree"
+waitregex "#|>"
+
+sendln "show ntp status"
+waitregex "#|>"
+
+sendln "show env all"
+waitregex "#|>"
+
+sendln "show interface transceiver detail"
+waitregex "#|>"
+
+sendln "show logging"
+waitregex "#|>"
