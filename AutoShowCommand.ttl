@@ -41,3 +41,5 @@ waitregex "#|>"
 
 sendln "show logging"
 waitregex "#|>"
+
+exit
